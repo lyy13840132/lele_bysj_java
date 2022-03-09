@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 587 # smtp的指定端口 使用465要将protocol改为smtps
+    username: 2215129852@qq.com
+    password: asvdbxnvmihbebab # 16位授权码 不是邮箱密码
+    protocol: smtp # 协议 默认就是smtp
+    default-encoding: utf-8 # 编码格式 默认就是utf-8
+    personal: 测试 # 自定义 发件人名称
+# 配置上传参数
+  http:
+    multipart:
+      enabled: true # 默认支持文件上传
+      file-size-threshold: 0 # 支持文件写入磁盘
+      max-file-size: 50MB # 最大文件上传大小
+      max-request-size: 100MB  # 最大支持请求大小
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mappingsystom?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=GMT%2B8
+    username: root
+    password: ll932640
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 1900000
+      maximum-pool-size: 20
+
+IMConfig:
+  sdkAppId: 1400558279
+  secretKey: dd3303a6a9badd77d7695c6481be6d1092851ee890d062ba510ac9fadd997b42
+
+  # 配置阿里云文件服务
+oos:
+  ENDPOINT: oss-cn-beijing.aliyuncs.com
+  ACCESS_KEY_ID: LTAI5t5yAftvWNZhH3V5SNX9
+  ACCESS_KEY_SECRE: EHco7RelSsHIYlZlTFfPRsx54fiU99
+  BACKET_NAME: wanqile
+  FOLDER: head/
+
+
+
+
+
+
+
+
+
